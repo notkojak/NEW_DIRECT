@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marineblog.net/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
