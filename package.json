@@ -26,6 +26,7 @@
     "@fontsource-variable/inter": "^5.2.5",
     "@maxmind/geoip2-node": "^6.2.0",
     "dayjs": "^1.11.11",
+    "google-indexing-script": "^0.4.0",
     "lucide-svelte": "^0.462.0"
   }
 }

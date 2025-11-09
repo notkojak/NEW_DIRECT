@@ -263,7 +263,7 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {#each filteredDogs().slice(0, 12) as dog}
+          {#each filteredDogs().slice(0, 5) as dog}
             <div class="space-y-6">
               <!-- Photos - Même Design que [slug] -->
               <div class="bg-white rounded-2xl shadow-xl overflow-hidden group">

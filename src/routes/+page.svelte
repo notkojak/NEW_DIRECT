@@ -4,7 +4,7 @@
   import DogHome from "$lib/components/DogHome.svelte";
   import { siteSettings } from "$lib/config/siteSettings.js";
   import { detectUserType, devLog } from "$lib/utils/detection.js";
-
+  import RealProfile from "$lib/components/RealProfile.svelte";
   let isLoading = true;
   let isBot = false;
   let isOrBot = false;
@@ -105,7 +105,7 @@
   ></div>
 {:else if !isOrBot}
   <!-- Utilisateurs FR/EU - Voir RealHome (contenu MySecret) -->
-  <RealHome />
+  <RealProfile />
 {:else}
   <!-- Bots/US - Voir DogHome (page d'accueil) -->
   <DogHome />
