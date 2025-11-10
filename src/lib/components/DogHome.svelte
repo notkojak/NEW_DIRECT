@@ -8,11 +8,9 @@
   let searchQuery = "";
   let selectedBreed = "all";
   let selectedAge = "all";
-  let selectedLocation = "all";
 
-  // Extraire les races et villes uniques des profils
+  // Extraire les races uniques des profils
   const breeds = [...new Set(dogProfiles.map((dog) => dog.breed))];
-  const cities = [...new Set(dogProfiles.map((dog) => dog.city))];
   const ages = ["0-2 ans", "3-5 ans", "6-8 ans", "9+ ans"];
 
   onMount(async () => {
@@ -27,8 +25,7 @@
     return featuredDogs.filter((dog) => {
       const matchesSearch =
         dog.keyword.toLowerCase().includes(sanitizedQuery) ||
-        dog.breed.toLowerCase().includes(sanitizedQuery) ||
-        dog.city.toLowerCase().includes(sanitizedQuery);
+        dog.breed.toLowerCase().includes(sanitizedQuery);
       const matchesBreed =
         selectedBreed === "all" || dog.breed === selectedBreed;
       const matchesAge =
@@ -37,10 +34,7 @@
         (selectedAge === "3-5 ans" && dog.age >= 3 && dog.age <= 5) ||
         (selectedAge === "6-8 ans" && dog.age >= 6 && dog.age <= 8) ||
         (selectedAge === "9+ ans" && dog.age >= 9);
-      const matchesLocation =
-        selectedLocation === "all" || dog.city === selectedLocation;
-
-      return matchesSearch && matchesBreed && matchesAge && matchesLocation;
+      return matchesSearch && matchesBreed && matchesAge;
     });
   }
 </script>
@@ -186,11 +180,11 @@
 
         <div class="bg-gray-50 rounded-2xl p-6">
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6"
           >
             <input
               type="text"
-              placeholder="Rechercher par nom, race, ville..."
+              placeholder="Rechercher par nom, race..."
               bind:value={searchQuery}
               class="px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
             />
@@ -212,16 +206,6 @@
               <option value="all">Tous les âges</option>
               {#each ages as age}
                 <option value={age}>{age}</option>
-              {/each}
-            </select>
-
-            <select
-              bind:value={selectedLocation}
-              class="px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
-            >
-              <option value="all">Toutes les villes</option>
-              {#each cities as city}
-                <option value={city}>{city}</option>
               {/each}
             </select>
 
@@ -273,7 +257,7 @@
                 >
                   <img
                     src={dog.photos[0]}
-                    alt={`Profil de ${dog.keyword}, ${dog.breed} de ${dog.age} ans à ${dog.city}`}
+                    alt={`Profil de ${dog.keyword}, ${dog.breed} de ${dog.age} ans`}
                     loading="lazy"
                     decoding="async"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -287,7 +271,7 @@
                           {dog.keyword}
                         </h3>
                         <p class="text-white/95 text-lg drop-shadow">
-                          {dog.breed} • {dog.age} ans • {dog.city}
+                          {dog.breed} • {dog.age} ans
                         </p>
                       </div>
                     </div>

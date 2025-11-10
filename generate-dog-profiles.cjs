@@ -30,13 +30,6 @@ const breeds = [
   'Shiba Inu', 'Bouvier Bernois', 'Leonberg', 'Terre-Neuve', 'Saint-Bernard', 'Dobermann'
 ];
 
-const cities = [
-  'Paris', 'Lyon', 'Marseille', 'Toulouse', 'Nice', 'Nantes', 'Strasbourg', 'Bordeaux',
-  'Lille', 'Rennes', 'Reims', 'Le Havre', 'Saint-Étienne', 'Toulon', 'Grenoble', 'Dijon',
-  'Angers', 'Villeurbanne', 'Montpellier', 'Clermont-Ferrand', 'Brest', 'Limoges', 'Tours',
-  'Amiens', 'Nîmes', 'Metz', 'Besançon', 'Orléans', 'Mulhouse', 'Rouen', 'Boulogne-Billancourt',
-  'Caen', 'Nancy', 'Saint-Denis', 'Argenteuil', 'Saint-Paul', 'Montreuil', 'Cannes', 'Lorient'
-];
 
 const personalities = [
   'Joueur', 'Loyal', 'Énergique', 'Doux', 'Intelligent', 'Amical', 'Protecteur', 'Affectueux',
@@ -90,11 +83,11 @@ const interests = [
 ];
 
 // Fonction pour générer une bio unique pour un chien
-function generateBio(name, breed, age, city, gender, interests, personality) {
+function generateBio(name, breed, age, gender, interests, personality) {
   const templates = [
-    `Bonjour, je suis ${name}, un adorable ${breed} de ${age} ans vivant à ${city}. Je suis plutôt du genre ${personality.toLowerCase()} et j'apprécie ${interests.slice(0, 2).join(' et ')}. Mes amis disent que je suis ${personality} et je cherche des compagnons de jeu ${personality.toLowerCase()} pour partager de bons moments.`,
-    `Salut ! Moi c'est ${name}, ${breed} ${gender} de ${age} ans. J'habite à ${city} et j'adore ${interests.slice(0, 3).join(', ')}. On me décrit comme un chien ${personality.toLowerCase()} et j'aimerais rencontrer d'autres chiens pour ${interests[2] || 'jouer'}.`,
-    `Hey ! Je m'appelle ${name} et je suis un ${breed} de ${age} ans. J'habite à ${city} et je suis ${gender}. Ma personnalité ? ${personality} ! J'adore particulièrement ${interests.slice(0, 2).join(' et ')} et je cherche des amis pour ${interests[1] || 'm\'amuser'}.`
+    `Bonjour, je suis ${name}, un adorable ${breed} de ${age} ans. Je suis plutôt du genre ${personality.toLowerCase()} et j'apprécie ${interests.slice(0, 2).join(' et ')}. Mes amis disent que je suis ${personality} et je cherche des compagnons de jeu ${personality.toLowerCase()} pour partager de bons moments.`,
+    `Salut ! Moi c'est ${name}, ${breed} ${gender} de ${age} ans. J'adore ${interests.slice(0, 3).join(', ')}. On me décrit comme un chien ${personality.toLowerCase()} et j'aimerais rencontrer d'autres chiens pour ${interests[2] || 'jouer'}.`,
+    `Hey ! Je m'appelle ${name} et je suis un ${breed} de ${age} ans. Je suis ${gender}. Ma personnalité ? ${personality} ! J'adore particulièrement ${interests.slice(0, 2).join(' et ')} et je cherche des amis pour ${interests[1] || 'm\'amuser'}.`
   ];
   
   return randomChoice(templates);
@@ -184,8 +177,7 @@ async function generateDogProfile(keyword, index) {
   const name = randomChoice(namePool);
   const breed = randomChoice(breeds);
   const age = randomBetween(1, 12);
-  const city = randomChoice(cities);
-  const size = randomChoice(['Petit', 'Moyen', 'Grand']);
+    const size = randomChoice(['Petit', 'Moyen', 'Grand']);
   const energy = randomChoice(['Faible', 'Moyen', 'Élevé']);
   const grooming = randomChoice(['Faible', 'Moyen', 'Élevé']);
   const selectedInterests = randomChoices(interests, randomBetween(4, 8));
@@ -196,7 +188,7 @@ async function generateDogProfile(keyword, index) {
   const sleepingHabit = randomChoice(sleepingHabits);
   
   // Générer la bio unique
-  const bio = generateBio(name, breed, age, city, gender, selectedInterests, personality);
+  const bio = generateBio(name, breed, age, gender, selectedInterests, personality);
   
   // Récupérer 4 vraies photos depuis l'API Dog CEO
   const photos = await fetchProfilePhotos();
@@ -209,8 +201,7 @@ async function generateDogProfile(keyword, index) {
     breed: breed,
     age: age,
     gender: gender,
-    city: city,
-    size: size,
+        size: size,
     bio: bio,
     photos: photos,
     personality: randomChoices(personalities, randomBetween(4, 7)),
@@ -259,10 +250,10 @@ async function generateDogProfile(keyword, index) {
     },
     createdAt: new Date().toISOString(),
     seo: {
-      title: `${name} - ${breed} de ${age} ans à ${city} | ${keyword}`,
-      description: `Découvrez ${name}, un magnifique ${breed} de ${age} ans à ${city}. ${name} est ${gender.toLowerCase()} et cherche des compagnons de jeu. Profil ${keyword}`,
+      title: `${name} - ${breed} de ${age} ans | ${keyword}`,
+      description: `Découvrez ${name}, un magnifique ${breed} de ${age} ans. ${name} est ${gender.toLowerCase()} et cherche des compagnons de jeu. Profil ${keyword}`,
       metaDescription: generateMetaDescription(keyword), // Méta-description fixe pour le blog
-      keywords: [keyword, name.toLowerCase(), breed.toLowerCase(), city.toLowerCase(), `chien ${city}`, `${breed} ${city}`, 'rencontres chiens', `adoption ${breed}`]
+      keywords: [keyword, name.toLowerCase(), breed.toLowerCase(), 'rencontres chiens', `adoption ${breed}`]
     }
   };
 }
@@ -338,8 +329,7 @@ async function generateAllProfiles() {
   console.log('\n📊 Statistiques détaillées:');
   console.log(`   - Total profils: ${profiles.length}`);
   console.log(`   - Races uniques: ${new Set(profiles.map(p => p.breed)).size}`);
-  console.log(`   - Villes uniques: ${new Set(profiles.map(p => p.city)).size}`);
-  console.log(`   - Mâles: ${profiles.filter(p => p.gender === 'Mâle').length}`);
+    console.log(`   - Mâles: ${profiles.filter(p => p.gender === 'Mâle').length}`);
   console.log(`   - Femelles: ${profiles.filter(p => p.gender === 'Femelle').length}`);
   console.log(`   - Âge moyen: ${(profiles.reduce((sum, p) => sum + p.age, 0) / profiles.length).toFixed(1)} ans`);
   console.log(`   - Photos fixes: ${profiles.length * 4} (4 par profil)`);
@@ -348,7 +338,7 @@ async function generateAllProfiles() {
   console.log('\n🔍 Exemples de profils:');
   profiles.slice(0, 3).forEach(profile => {
     console.log(`   - ${profile.slug}`);
-    console.log(`     ${profile.name} - ${profile.breed} - ${profile.city}`);
+    console.log(`     ${profile.name} - ${profile.breed}`);
     console.log(`     ${profile.bio.substring(0, 100)}...`);
     console.log('');
   });

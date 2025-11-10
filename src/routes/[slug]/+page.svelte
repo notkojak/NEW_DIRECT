@@ -93,10 +93,10 @@
       content={`Blog de ${dogProfile.keyword} - Mon quotidien et mes aventures`}
     />
     <meta property="og:description" content={dogProfile.seo.metaDescription} />
-    <meta property="og:image" content={dogProfile.photos[0]} />
+    <!-- <meta property="og:image" content={dogProfile.photos[0]} />
     <meta property="og:image:secure_url" content={dogProfile.photos[0]} />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:height" content="630" /> -->
     <meta
       property="og:image:alt"
       content={`Photo de ${dogProfile.keyword} - ${dogProfile.breed}`}
