@@ -82,12 +82,12 @@ const interests = [
   'Musique classique', 'Films d\'aventure', 'Cuisine maison', 'Jardinage', 'Bricolage'
 ];
 
-// Fonction pour générer une bio unique pour un chien
-function generateBio(name, breed, age, gender, interests, personality) {
+// Fonction pour générer une bio unique pour un chien (du point de vue du propriétaire)
+function generateBio(keyword, name, breed, age, gender, interests, personality) {
   const templates = [
-    `Bonjour, je suis ${name}, un adorable ${breed} de ${age} ans. Je suis plutôt du genre ${personality.toLowerCase()} et j'apprécie ${interests.slice(0, 2).join(' et ')}. Mes amis disent que je suis ${personality} et je cherche des compagnons de jeu ${personality.toLowerCase()} pour partager de bons moments.`,
-    `Salut ! Moi c'est ${name}, ${breed} ${gender} de ${age} ans. J'adore ${interests.slice(0, 3).join(', ')}. On me décrit comme un chien ${personality.toLowerCase()} et j'aimerais rencontrer d'autres chiens pour ${interests[2] || 'jouer'}.`,
-    `Hey ! Je m'appelle ${name} et je suis un ${breed} de ${age} ans. Je suis ${gender}. Ma personnalité ? ${personality} ! J'adore particulièrement ${interests.slice(0, 2).join(' et ')} et je cherche des amis pour ${interests[1] || 'm\'amuser'}.`
+    `Salut, c'est ${keyword} ! J'ai un ${breed} magnifique qui s'appelle ${name}. Il a ${age} ans et est plutôt ${personality.toLowerCase()}. On adore ${interests.slice(0, 2).join(' et ')} ensemble. ${name} est vraiment ${personality} et on cherche des compagnons de jeu pour partager de bons moments.`,
+    `Bonjour ! Moi c'est ${keyword} et je suis le propriétaire de ${name}, un superbe ${breed} ${gender} de ${age} ans. J'adore ${interests.slice(0, 3).join(', ')} avec lui. ${name} est un chien ${personality.toLowerCase()} et j'aimerais qu'il rencontre d'autres chiens pour ${interests[2] || 'jouer'}.`,
+    `Hey ! Je suis ${keyword} et j'ai un ${breed} fantastique de ${age} ans qui s'appelle ${name}. C'est un ${gender} avec une personnalité ${personality.toLowerCase()} ! On adore particulièrement ${interests.slice(0, 2).join(' et ')} et je cherche des amis pour ${name} afin qu'il puisse ${interests[1] || 's\'amuser'}.`
   ];
   
   return randomChoice(templates);
@@ -187,8 +187,8 @@ async function generateDogProfile(keyword, index) {
   const favoriteToy = randomChoice(favoriteToys);
   const sleepingHabit = randomChoice(sleepingHabits);
   
-  // Générer la bio unique
-  const bio = generateBio(name, breed, age, gender, selectedInterests, personality);
+  // Générer la bio unique (du point de vue du propriétaire)
+  const bio = generateBio(keyword, name, breed, age, gender, selectedInterests, personality);
   
   // Récupérer 4 vraies photos depuis l'API Dog CEO
   const photos = await fetchProfilePhotos();

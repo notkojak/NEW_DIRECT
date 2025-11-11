@@ -79,7 +79,7 @@
     <meta name="googlebot" content="index, follow" />
     <meta name="language" content={siteSettings.seo.language} />
     <meta name="geo.region" content={siteSettings.seo.geoRegion} />
-    <meta name="geo.placename" content={dogProfile.city} />
+    <!-- <meta name="geo.placename" content={dogProfile.city} /> -->
     <link
       rel="alternate"
       hreflang="fr"
