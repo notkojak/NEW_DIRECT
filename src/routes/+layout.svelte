@@ -32,7 +32,7 @@
     });
   </script>
 
-  <noscript>
+  <!-- <noscript>
     <img
       src="https://backend.swetrix.com/log/noscript?pid=Qvw13HdV7e2r"
       alt=""
@@ -44,7 +44,7 @@
     defer
     src="https://cloud.umami.is/script.js"
     data-website-id="2d205b0d-4571-4e82-91f9-b13125d6d8e9"
-  ></script>
+  ></script> -->
 </svelte:head>
 
 <div class="app">
