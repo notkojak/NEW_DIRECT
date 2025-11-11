@@ -15,7 +15,7 @@
   const videoSource = "/brune/MS3.mp4";
 
   let link =
-    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://i.ibb.co/ncXP788/profil.webp&s1=DIRECT&s2=` +
+    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://i.ibb.co/ncXP788/profil.webp&s1=DIRECT2&s2=` +
     date;
 
   $: titre = `${prenom} - Page Privée`;
@@ -439,7 +439,7 @@
     href={link}
     class="cursor-pointer bg-gradient-to-b from-[#7a0040] to-[#7a0040] border-b-4 border-[#5e0036] text-white font-semibold py-4 flex items-center justify-center rounded-2xl my-2 space-x-4"
   >
-    <div>VIENS ME PARLER 😘</div>
+    <div>ME CONTACTER MAINTENANT</div>
   </a>
 
   <img
@@ -471,13 +471,15 @@
       >
       et <b>dis-moi quand t'es dispo.</b> Je reçois les notifications quand je
       reçois un message, donc habituellement,
-      <b>je réponds en quelques minutes.</b><br /><br />
+      <b>je réponds en quelques minutes.</b>
+      <br /><br /> 
+      <!-- <br /><br />
       Je préviens l'essai coûte <b>seulement {price} </b>, mais grâce à ça on
       est sûr de tomber sur des mecs sérieux, et toi tu peux contacter
       <b>autant de filles que tu veux et recevoir mes nudes sans limites.</b>
-      <br /><br />
+      <br /><br /> -->
       Je préfère passer par <b>My Secret</b> car au moins je ne me fais pas
-      harceler comme sur les applis de rencontres ou insta,
+      harceler comme sur les applis de rencontres,
       <b>ça permet de parler sans se faire spammer</b> par des milliers de gros relous.
       😘
     </p>
@@ -511,7 +513,7 @@
     href={link}
     class="cursor-pointer bg-gradient-to-b from-[#7e0048] to-[#7e0048] border-b-4 border-[#5e0036] text-white font-semibold py-4 flex items-center justify-center rounded-2xl my-2 space-x-4"
   >
-    <div>VOIR MON PROFIL SECRET</div>
+    <div>CLIQUE ICI POUR VOIR MON PROFIL</div>
   </a>
 
   <section class="p-3 pb-0 mt-6 rounded-3xl">
@@ -555,7 +557,7 @@
     </div>
     <div class="text-center m-auto w-[95%] font-semibold text-sm">
       Ce ne sont pas des escortes, tu peux contacter autant de filles que tu
-      veux. 👌
+      veux 👌
     </div>
   </section>
 
@@ -580,10 +582,13 @@
       Tu veux me rejoindre ? 😏
     </div>
     <div class="mb-4 text-sm font-semibold text-center">
-      Super, tu ne le regretteras pas ! 🔥<br /><br />Et si tu doutes encore tu
-      peux tester avec l'offre d'essai à seulement {price} ! <br /><br />Il te
+      Super, tu ne le regretteras pas ! 🔥
+      <!-- <br /><br /> -->
+      <!-- Et si tu doutes encore tu
+      peux tester avec l'offre d'essai à seulement {price} ! -->
+       <br /><br />Il te
       suffit de cliquer sur le bouton ci-dessous, de t'inscrire en une minute
-      puis de choisir l'offre d'essai
+      puis de m'envoyer un petit message
     </div>
   </section>
 
@@ -609,7 +614,7 @@
     href={link}
     class="cursor-pointer bg-gradient-to-b from-[#7e0048] to-[#7e0048] border-b-4 border-[#5e0036] text-white font-semibold py-4 flex items-center justify-center rounded-2xl my-2 space-x-4"
   >
-    REJOINS-MOI SUR MY SECRET 🔞
+    S'INSCRIRE SUR MY SECRET 🔞
   </a>
 </div>
 
