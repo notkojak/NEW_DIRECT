@@ -417,7 +417,7 @@
   <p class="py-2 pb-0 m-auto mb-3 font-semibold text-center text- rounded-3xl">
     À la recherche d'un plan cul régulier {monip} pour s'amuser un peu 🙈<br
     /><br />
-    Si tu veux échanger des nudes et qu’on se rencontre, écris-moi ici 
+    Si tu veux échanger des nudes et qu’on se rencontre, envoie-moi un message ici 
   </p>
 
   <div class="flex justify-center space-x-1">
