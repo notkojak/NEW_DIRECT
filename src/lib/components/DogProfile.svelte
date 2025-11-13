@@ -685,7 +685,6 @@
               >
             </div>
 
-            
             <div
               class="flex items-center justify-between p-3 bg-white rounded-lg"
             >
@@ -874,7 +873,7 @@
                 />
               </svg>
             </div>
-            <h3 class="text-xl font-bold mb-2">Contactez le propriétaire</h3>
+            <h3 class="text-xl font-bold mb-2">Contactez la propriétaire</h3>
             <p class="text-white/80 text-sm">{dogProfile.owner.name}</p>
           </div>
 

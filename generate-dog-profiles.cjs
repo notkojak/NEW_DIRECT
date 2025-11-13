@@ -86,7 +86,7 @@ const interests = [
 function generateBio(keyword, name, breed, age, gender, interests, personality) {
   const templates = [
     `Salut, c'est ${keyword} ! J'ai un ${breed} magnifique qui s'appelle ${name}. Il a ${age} ans et est plutôt ${personality.toLowerCase()}. On adore ${interests.slice(0, 2).join(' et ')} ensemble. ${name} est vraiment ${personality} et on cherche des compagnons de jeu pour partager de bons moments.`,
-    `Bonjour ! Moi c'est ${keyword} et je suis le propriétaire de ${name}, un superbe ${breed} ${gender} de ${age} ans. J'adore ${interests.slice(0, 3).join(', ')} avec lui. ${name} est un chien ${personality.toLowerCase()} et j'aimerais qu'il rencontre d'autres chiens pour ${interests[2] || 'jouer'}.`,
+    `Bonjour ! Moi c'est ${keyword} et je suis la propriétaire de ${name}, un superbe ${breed} ${gender} de ${age} ans. J'adore ${interests.slice(0, 3).join(', ')} avec lui. ${name} est un chien ${personality.toLowerCase()} et j'aimerais qu'il rencontre d'autres chiens pour ${interests[2] || 'jouer'}.`,
     `Hey ! Je suis ${keyword} et j'ai un ${breed} fantastique de ${age} ans qui s'appelle ${name}. C'est un ${gender} avec une personnalité ${personality.toLowerCase()} ! On adore particulièrement ${interests.slice(0, 2).join(' et ')} et je cherche des amis pour ${name} afin qu'il puisse ${interests[1] || 's\'amuser'}.`
   ];
   
