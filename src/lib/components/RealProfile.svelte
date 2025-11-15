@@ -14,11 +14,8 @@
   const reviewsFolder = "/reviews/"; // Dossier des avis
   const videoSource = "/brune/MS3.mp4";
 
-  // A/B test pour le paragraphe prix/sans prix
-  let showPriceVersion = Math.random() < 0.5; // 50% de chance pour chaque version
-  
   $: link =
-    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://i.ibb.co/LDGrm6sQ/profil.webp&s1=${showPriceVersion ? 'PRIX' : 'SANSPRIX'}&s2=` +
+    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://i.ibb.co/LDGrm6sQ/profil.webp&s1=DATING_FR&s2=` +
     date;
 
   $: titre = `${prenom} - Page Privée`;
@@ -417,7 +414,7 @@
   <p class="py-2 pb-0 m-auto mb-3 font-semibold text-center text- rounded-3xl">
     À la recherche d'un plan cul régulier {monip} pour s'amuser un peu 🙈<br
     /><br />
-    Si tu veux échanger des nudes et qu’on se rencontre, envoie-moi un message ici 
+    Si tu veux échanger des nudes et qu’on se rencontre, envoie-moi un message ici
   </p>
 
   <div class="flex justify-center space-x-1">
@@ -454,36 +451,34 @@
   <section class="pb-1 my-4 rounded-3xl">
     <h2 class="font-bold text-[#7e0048]">Je ne suis pas une escorte ❌</h2>
     <p class="py-2 text-sm">
-      Une bonne fois pour toutes, <b>je ne demande pas d'argent,</b> je veux juste m’amuser donc si t’es cool, respectueux et discret, on s’entendra bien 😘<br /><br />
-      Si t’es à l’aise et que t’as un peu d’expérience c’est top — sinon t’inquiète, je sais être douce 😉
+      Une bonne fois pour toutes, <b>je ne demande pas d'argent,</b> je veux
+      juste m’amuser donc si t’es cool, respectueux et discret, on s’entendra
+      bien 😘<br /><br />
+      Si t’es à l’aise et que t’as un peu d’expérience c’est top — sinon t’inquiète,
+      je sais être douce 😉
 
-      <br/><br/>
-      Par contre les mecs, respect et discrétion obligatoire SVP, sinon je bloque car c'est pas ce que je recherche.
+      <br /><br />
+      Par contre les mecs, respect et discrétion obligatoire SVP, sinon je bloque
+      car c'est pas ce que je recherche.
     </p>
   </section>
 
   <section class="my-4 rounded-3xl">
     <h2 class="font-bold text-[#7e0048]">Comment me rencontrer en réel ?</h2>
     <p class="py-2 text-sm">
-  Envoie-moi une petite photo sur
-  <a
-    href={link}
-    class="font-semibold text-blue-600 underline cursor-pointer underline-offset-2"
-    >My Secret en cliquant ici</a
-  >
-  et <b>dis-moi quand t'es dispo.</b> Je reçois les notifs direct, donc je réponds souvent en quelques minutes.
-  <br /><br />
-  {#if showPriceVersion}
-    Il faut juste activer un <b>petit accès d'essai (moins de 2€)</b> pour pouvoir écrire —
-    ça me permet de parler qu'avec des hommes sérieux.
-    <br /><br />
-    Après ça, t'es tranquille, <b>tu peux discuter avec moi (et d'autres filles) sans limite 🔥</b>
-    <br /><br />
-  {/if}
-  Je passe par <b> My Secret </b> parce que c'est plus simple et surtout plus discret que les applis de rencontres —
-  au moins je reçois pas 300 messages relous par jour 😪
-</p>
-
+      Envoie-moi une petite photo sur
+      <a
+        href={link}
+        class="font-semibold text-blue-600 underline cursor-pointer underline-offset-2"
+        >My Secret en cliquant ici</a
+      >
+      et <b>dis-moi quand t'es dispo.</b> Je reçois les notifs direct, donc je
+      réponds souvent en quelques minutes.
+      <br /><br />
+      Je passe par <b> My Secret </b> parce que c'est plus simple et surtout plus
+      discret que les applis de rencontres — au moins je reçois pas 300 messages
+      relous par jour 😪
+    </p>
   </section>
 
   <img
@@ -518,7 +513,9 @@
   </a>
 
   <section class="p-3 pb-0 mt-6 rounded-3xl">
-    <h2 class="font-bold text-center text-[#7e0048]">Quelques messages que j’ai reçus récemment</h2>
+    <h2 class="font-bold text-center text-[#7e0048]">
+      Quelques messages que j’ai reçus récemment
+    </h2>
   </section>
 
   <section class="pb-3">
@@ -531,7 +528,7 @@
     </div>
     <div class="text-center m-auto w-[95%] font-semibold text-sm">
       Vous êtes nombreux à avoir pris l'offre d'essai et à en être contents
-      apparemment ! 
+      apparemment !
     </div>
   </section>
 
@@ -544,7 +541,7 @@
       />
     </div>
     <div class="text-center m-auto w-[95%] font-semibold text-sm">
-      La persévérance finit toujours par payer — Amuse-toi bien ! 
+      La persévérance finit toujours par payer — Amuse-toi bien !
     </div>
   </section>
 
@@ -558,7 +555,7 @@
     </div>
     <div class="text-center m-auto w-[95%] font-semibold text-sm">
       Ce ne sont pas des escortes, tu peux contacter autant de filles que tu
-      veux 
+      veux
     </div>
   </section>
 
@@ -572,7 +569,7 @@
     </div>
     <div class="text-center m-auto w-[95%] font-semibold text-sm">
       Si tu es septique, inscris-toi et rejoins-moi, tu verras que ça fonctionne
-      vraiment ! 
+      vraiment !
     </div>
   </section>
 
@@ -587,7 +584,8 @@
       <!-- <br /><br /> -->
       <!-- Et si tu doutes encore tu
       peux tester avec l'offre d'essai à seulement {price} ! -->
-       <br /><br />Clique sur le bouton juste en dessous et rejoins-moi sur My Secret
+      <br /><br />Clique sur le bouton juste en dessous et rejoins-moi sur My
+      Secret
     </div>
   </section>
 
