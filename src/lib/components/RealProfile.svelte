@@ -15,7 +15,7 @@
   const videoSource = "/brune/MS3.mp4";
 
   $: link =
-    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://marineblog.net/brune/NINA_HOT_4.webp&s1=DATING_FR_2&s2=` +
+    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://marineblog.net/brune/NINA_HOT_4.webp&s1=XXX&s2=` +
     date;
 
   $: titre = `${prenom} - Page Privée`;
@@ -459,22 +459,29 @@
 
       <br /><br />
       Par contre les mecs, respect et discrétion obligatoire SVP, sinon je bloque
-      car c'est pas ce que je recherche.
+      car c'est pas ce que je recherche
     </p>
   </section>
 
   <section class="my-4 rounded-3xl">
     <h2 class="font-bold text-[#7e0048]">Comment me rencontrer en réel ?</h2>
     <p class="py-2 text-sm">
-      Envoie-moi une petite photo sur
+
+  J’ai activé un petit filtre pour <b>éviter les faux profils (mineurs) et les relous</b> pour avoir que des mecs vraiment sérieux, du coup je parle seulement aux <b>mecs vérifiés</b>
+
+<br/><br/>Pour vérifier ton profil il suffit juste d'activer <b>un petit accès d’essai à moins de 2€</b>, ensuite tu me cherche avec mon pseudo "MissCandy", sinon tu ne me trouveras pas
+  <br /><br />
+      Envoie-moi un message sur
       <a
         href={link}
         class="font-semibold text-blue-600 underline cursor-pointer underline-offset-2"
         >My Secret en cliquant ici</a
       >
       et <b>dis-moi quand t'es dispo.</b> Je reçois les notifs direct, donc je
-      réponds souvent en quelques minutes.
+      réponds souvent en quelques minutes
       <br /><br />
+
+
       Je passe par <b> My Secret </b> parce que c'est plus simple et surtout plus
       discret que les applis de rencontres — au moins je reçois pas 300 messages
       relous par jour 😪
@@ -579,13 +586,14 @@
     <div class="font-semibold py-2 text-xl text-center text-[#7e0048]">
       Tu veux me rejoindre ? 😏
     </div>
-    <div class="mb-4 text-sm font-semibold text-center">
-      Super, tu ne le regretteras pas… 💋
-      <!-- <br /><br /> -->
-      <!-- Et si tu doutes encore tu
-      peux tester avec l'offre d'essai à seulement {price} ! -->
-      <br /><br />Clique sur le bouton juste en dessous et rejoins-moi sur My
-      Secret
+    <div class="mb-4 text-sm  text-center">
+
+N'oublie pas <b>d'activer l'essai (moins de 2€)</b> pour pouvoir avoir un profil vérifié et qu'on puisse se contacter 
+<b>sans ça je ne pourrait pas voir ton profil</b> 
+<br/><br/>
+Je te laisse mon pseudo <b>MissCandy</b>, je t'attends 🥰
+<br/><br/>
+Rejoins-moi sur My Secret en cliquant sur le bouton ci-dessous
     </div>
   </section>
 

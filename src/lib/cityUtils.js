@@ -27,7 +27,7 @@ Sinon, ne conserve que le premier mot (avant tout tiret), sans tirets.
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer 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", // À remplacer par votre clé API
+          "Bearer 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", // À remplacer par votre clé API
       },
       body: JSON.stringify({
         model: "gpt-4.1",
@@ -51,6 +51,7 @@ Sinon, ne conserve que le premier mot (avant tout tiret), sans tirets.
     const optimizedCity = data.choices[0]?.message?.content?.trim();
 
     if (optimizedCity) {
+      
       return optimizedCity;
     }
 
