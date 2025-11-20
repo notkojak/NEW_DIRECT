@@ -15,7 +15,7 @@
   const videoSource = "/brune/MS3.mp4";
 
   $: link =
-    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://marineblog.net/brune/NINA_HOT_4.webp&s1=XXX&s2=` +
+    `https://invitation.my-secret.net/?v=soft&userName=MissCandy&userDistance=7&userPhotos=53&userPicture=https://marineblog.net/brune/NINA_HOT_4.webp&s1=DIRECT_PRIX&s2=` +
     date;
 
   $: titre = `${prenom} - Page Privée`;
